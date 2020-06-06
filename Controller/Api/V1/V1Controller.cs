@@ -8,7 +8,8 @@ using System.Text;
 namespace LuciaTech.Helper.Controller.Api.V1
 {
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-    [Route("api/v1/[controller]/[action]")]
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/[controller]/[action]")]
     public abstract class V1Controller : BaseController
     {
 
